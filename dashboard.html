@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header class="header">
+    <h1>Dashboard</h1>
+    <nav>
+      <a href="#" onclick="logout()" class="logout-btn">Logout</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-grid">
+    <div class="card full-width">
+      <h2>Welcome to Career Guidance</h2>
+      <p>
+        Explore the best colleges, exams, and courses tailored to your goals.
+        Make informed decisions for your future with our expert recommendations.
+      </p>
+    </div>
+
+    <!-- 🔥 NEW SKILL PROGRESSION CARD (ADDED) -->
+    <div class="card full-width">
+      <h2>Skill Progression & Career Readiness</h2>
+
+      <form id="skillForm">
+        <label for="careerGoal">Select Career Goal:</label>
+        <select id="careerGoal" required>
+          <option value="Frontend Developer">Frontend Developer</option>
+          <option value="Data Analyst">Data Analyst</option>
+          <option value="Software Engineer">Software Engineer</option>
+        </select>
+
+        <label for="currentSkills">Your Current Skills (comma separated):</label>
+        <input
+          type="text"
+          id="currentSkills"
+          placeholder="HTML, CSS"
+          required
+        >
+
+        <button type="submit">Generate Skill Roadmap</button>
+      </form>
+
+      <div class="suggestions" id="skillOutput"></div>
+    </div>
+    <!-- 🔥 END NEW SECTION -->
+
+    <div class="card">
+      <h2>Find Recommended Exams</h2>
+      <div class="filter-container">
+        <button class="filter-button" id="openExamFilter">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+          </svg>
+          Filter Exams
+        </button>
+        <div class="filter-popover" id="examFilterPopover">
+          <h3>Filter Options</h3>
+          <div class="filter-option">
+            <label><input type="checkbox" name="streamFilter" value="Science" checked> Science</label>
+          </div>
+          <div class="filter-option">
+            <label><input type="checkbox" name="streamFilter" value="Commerce"> Commerce</label>
+          </div>
+          <div class="filter-option">
+            <label><input type="checkbox" name="streamFilter" value="Arts"> Arts</label>
+          </div>
+          <div class="filter-actions">
+            <button class="reset-btn">Reset</button>
+            <button class="apply-btn" id="applyExamFilter">Apply</button>
+          </div>
+        </div>
+      </div>
+      <div class="suggestions" id="examSuggestions"></div>
+    </div>
+
+    <div class="card">
+      <h2>College Suggestions</h2>
+      <form id="collegeForm">
+        <label for="percentageCollege">Enter Your Percentage:</label>
+        <input type="number" id="percentageCollege" placeholder="e.g., 85" required>
+        <button type="submit">Get Colleges</button>
+      </form>
+      <div class="suggestions" id="collegeSuggestions"></div>
+    </div>
+
+    <div class="card">
+      <h2>Courses After Graduation</h2>
+      <form id="graduationForm">
+        <label for="graduationType">Select Graduation:</label>
+        <select id="graduationType">
+          <option value="B.Tech">B.Tech</option>
+          <option value="B.Com">B.Com</option>
+          <option value="BA">BA</option>
+          <option value="B.Sc">B.Sc</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit">Get Courses</button>
+      </form>
+      <div class="suggestions" id="courseSuggestions"></div>
+    </div>
+
+    <div class="card">
+      <h2>Subject-Based Courses</h2>
+      <form id="courseForm">
+        <label for="subject">Select Subject:</label>
+        <select id="subject">
+          <option value="Biology">Biology</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Commerce">Commerce</option>
+          <option value="Arts">Arts</option>
+        </select>
+        <button type="submit">Get Courses</button>
+      </form>
+      <div class="suggestions" id="courseSuggestions2"></div>
+    </div>
+
+    <div class="card">
+      <h2>Government Exam Suggestions</h2>
+      <form id="govtExamForm">
+        <label for="qualificationLevel">Select Qualification:</label>
+        <select id="qualificationLevel">
+          <option value="12th">12th</option>
+          <option value="Graduation">Graduation</option>
+        </select>
+        <button type="submit">Get Exams</button>
+      </form>
+      <div class="suggestions" id="govtExamSuggestions"></div>
+    </div>
+
+    <div class="card">
+      <h2>College/Exam Based on Percentage</h2>
+      <form id="percentageForm">
+        <label for="percentage">Enter Your Percentage:</label>
+        <input type="number" id="percentage" placeholder="e.g., 92" required>
+        <label for="examTypePercentage">Select Exam Type:</label>
+        <select id="examTypePercentage">
+          <option value="JEE">JEE</option>
+          <option value="NEET">NEET</option>
+        </select>
+        <button type="submit">Get Suggestions</button>
+      </form>
+      <div class="suggestions" id="percentageSuggestions"></div>
+    </div>
+
+    <div class="card full-width">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+  </main>
+  
+  <footer class="footer">
+    <p>© 2025 Career Path Recommender</p>
+  </footer>
+  
+  <script src="dashboard.js"></script>
+</body>
+</html>

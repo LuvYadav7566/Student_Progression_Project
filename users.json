@@ -1,0 +1,47 @@
+[
+  {
+    "username": "Luvadmin",
+    "password": "admin123",
+    "role": "admin"
+  },
+  {
+    "username": "Luv",
+    "password": "12345",
+    "role": "student"
+  },
+  {
+    "username": "ved",
+    "password": "rat",
+    "role": "student"
+  },
+  {
+    "username": "vedant",
+    "password": "123@",
+    "role": "student"
+  },
+  {
+    "username": "Bhavesh",
+    "password": "123@",
+    "role": "student"
+  },
+  {
+    "username": "aayush",
+    "password": "123",
+    "role": "student"
+  },
+  {
+    "username": "Luv Yadav",
+    "password": "123@",
+    "role": "student"
+  },
+  {
+    "username": "Kushagra Yadav",
+    "password": "Laptop123",
+    "role": "student"
+  },
+  {
+    "username": "Kamal Yadav",
+    "password": "Kamal123",
+    "role": "student"
+  }
+]

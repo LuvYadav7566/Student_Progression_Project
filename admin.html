@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header class="header">
+    <h1>Admin Panel</h1>
+    <nav>
+      <a href="#" onclick="logout()" class="logout-btn">Logout</a>
+    </nav>
+  </header>
+
+  <main class="admin-container">
+    <section class="admin-section">
+      <h2>Manage Users</h2>
+      <div id="usersList"></div>
+    </section>
+
+    <section class="admin-section">
+      <h2>Student Queries</h2>
+      <div id="queriesList"></div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
